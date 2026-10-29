@@ -1,14 +1,180 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BESTIA</title><style>:root{--bg:#fff;--fg:#1d1d1f;--mut:#5f6368;--line:#e3e3e3;--acc:#b3261e}@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mut:#a0a0a0;--line:#2c2c2c;--acc:#ff6b5e}}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}main{max-width:760px;margin:0 auto;padding:32px 16px 64px}
-h1{font-size:28px;margin:0 0 8px}h2{font-size:19px;margin:28px 0 6px}p,li{color:var(--fg)}.mut{color:var(--mut);font-size:14px}a{color:var(--acc)}hr{border:0;border-top:1px solid var(--line);margin:40px 0}nav a{margin-right:16px}</style></head><body><main><nav><a href="./">BESTIA</a><a href="polityka-prywatnosci.html">Polityka prywatności / Privacy Policy</a></nav>
-<h1>BESTIA</h1>
-<p>System planowania treningu dla zawodników biegów z przeszkodami (OCR). Na podstawie danych z zegarka Garmin układa plan pod cele zawodnika (starty, testy, siła i chwyt), wysyła treningi do Garmin Connect i pokazuje postęp: cele, rekordy i podsumowanie każdego bloku treningowego.</p>
-<h2>Jak to działa</h2>
-<ol><li>Zawodnik łączy konto Garmin Connect i wyraża zgodę na przetwarzanie danych.</li><li>BESTIA pobiera aktywności i dane dzienne (HRV, tętno spoczynkowe, sen, masa ciała) dokładnie tak, jak pokazuje je Garmin.</li><li>Plan treningowy oparty na literaturze naukowej trafia na zegarek przez Garmin Connect.</li><li>Model językowy przygotowuje plan i podsumowania wyłącznie z danych danego zawodnika; dane nie służą do trenowania modeli AI.</li></ol>
-<h2>Status</h2>
-<p>Wersja testowa, rozwijana przez MiMariposa sp. z o.o. (marka K2-Estates, <a href="https://k2estates.pl">k2estates.pl</a>). Pierwsza grupa testowa: zawodnicy drużyny OCR Głodne Wilki (<a href="https://glodnewilki.pl">glodnewilki.pl</a>), stowarzyszenia współzałożonego przez MiMariposa sp. z o.o. BESTIA korzysta z AI wyłącznie za osobną zgodą użytkownika (<a href="polityka-prywatnosci.html#ai">szczegóły</a>).</p>
-<hr>
-<h2>O firmie</h2><p>BESTIĘ rozwija MiMariposa sp. z o.o. z siedzibą w Lublinie, ul. Tomasza Zana 11A/166, 20-601 Lublin, wpisana do rejestru przedsiębiorców KRS pod numerem 0000426506, NIP 9462639273. Prezes Zarządu: Rafał Stachyra. MiMariposa jest spółką holdingową działającą pod marką K2-Estates (<a href="https://k2estates.pl">k2estates.pl</a>) oraz współzałożycielem Stowarzyszenia Głodne Wilki, drużyny biegów z przeszkodami (<a href="https://glodnewilki.pl">glodnewilki.pl</a>). BESTIA jest projektem w fazie testów, rozwijanym na tej stronie. Kontakt: <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a>.</p><hr><h1>BESTIA (English)</h1>
-<p>A training planning system for obstacle course racing (OCR) athletes. Using Garmin watch data, it builds a plan around the athlete's goals (races, tests, strength and grip), sends structured workouts to Garmin Connect and shows progress: goals, records and a review of every training block.</p>
-<ol><li>The athlete connects a Garmin Connect account and gives consent.</li><li>BESTIA reads activities and daily metrics (HRV, resting heart rate, sleep, body weight) exactly as Garmin reports them.</li><li>An evidence-based training plan is delivered to the watch via Garmin Connect.</li><li>A language model prepares plans and summaries only from that athlete's own data; no data is used to train AI models.</li></ol>
-<p>Status: beta, developed by MiMariposa sp. z o.o. (brand K2-Estates, k2estates.pl). First test group: athletes of the Głodne Wilki OCR team, an association co-founded by MiMariposa sp. z o.o. BESTIA uses AI only with the user's separate consent (<a href="polityka-prywatnosci.html#ai-en">details</a>).</p><h2>About the company</h2><p>BESTIA is developed by MiMariposa sp. z o.o., registered office: ul. Tomasza Zana 11A/166, 20-601 Lublin, Poland, National Court Register (KRS) no. 0000426506, tax ID (NIP) 9462639273. President of the Management Board: Rafał Stachyra. MiMariposa is a holding company operating under the K2-Estates brand (<a href="https://k2estates.pl">k2estates.pl</a>) and a co-founder of the Głodne Wilki association, an obstacle course racing team (<a href="https://glodnewilki.pl">glodnewilki.pl</a>). BESTIA is a project in its test phase, presented on this site. Contact: <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a>.</p><hr><p class="mut">MiMariposa sp. z o.o. (marka / brand K2-Estates, <a href="https://k2estates.pl">k2estates.pl</a>), ul. Tomasza Zana 11A/166, 20-601 Lublin, KRS 0000426506, NIP 9462639273, kontakt / contact: <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a></p></main></body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BESTIA · system treningowy drużyny Głodne Wilki</title>
+<meta name="description" content="BESTIA: system planowania treningu dla zawodników OCR drużyny Głodne Wilki. Plan na zegarek Garmin, cele, rekordy, regeneracja. Rozwijany przez MiMariposa sp. z o.o.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0c;--panel:#141416;--line:#26262a;--fg:#f3f3f1;--mut:#a3a3a8;--acc:#e8462a;--acc2:#ff7a4d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc2)}img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font:800 24px/1 "Barlow Condensed",sans-serif;letter-spacing:.06em;color:var(--fg);text-decoration:none}
+.brand span{color:var(--acc)}
+nav.main{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+nav.main a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:500}
+nav.main a:hover{color:var(--fg)}
+.lang{border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+@media(max-width:720px){nav.main a:not(.lang){display:none}}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.2) brightness(.42)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.1) 30%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:64px;padding-top:120px}
+.hero img.logo{width:min(320px,70vw);margin-bottom:22px;opacity:.95}
+h1{font:800 clamp(44px,8vw,92px)/.92 "Barlow Condensed",sans-serif;margin:0 0 18px;letter-spacing:.01em;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:clamp(17px,2vw,20px);color:#dcdcd8;max-width:640px;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15px}
+.btn.p{background:var(--acc);color:#fff}.btn.s{border:1px solid #55555c;color:var(--fg)}
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 13px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}
+h2{font:800 clamp(34px,5vw,54px)/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 20px}
+h3{font:600 19px/1.3 Inter,sans-serif;margin:0 0 8px}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.muted{color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:36px}
+.stats div{background:var(--panel);padding:22px 18px}
+.stats b{display:block;font:800 40px/1 "Barlow Condensed",sans-serif;color:var(--fg)}
+.stats span{font-size:13px;color:var(--mut)}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px;margin-top:36px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:8px;filter:grayscale(.1)}
+.gallery .tall{grid-row:span 2}
+@media(max-width:720px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+.events{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.events span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:#d6d6d2}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card .n{font:800 28px/1 "Barlow Condensed",sans-serif;color:var(--acc);margin-bottom:12px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;padding:0;list-style:none}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;border-top:3px solid var(--acc);padding-top:14px}
+.steps li::before{content:"0" counter(s);font:800 22px/1 "Barlow Condensed",sans-serif;color:var(--mut);display:block;margin-bottom:8px}
+.ai{background:linear-gradient(135deg,#1b120f,#141416);border:1px solid #4a2a20;border-radius:14px;padding:30px;margin-top:28px}
+.ai ul{margin:12px 0 0;padding-left:20px}.ai li{margin:6px 0}
+.company{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+@media(max-width:860px){.company{grid-template-columns:1fr}}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}dt{color:var(--mut)}dd{margin:0}
+footer{padding:40px 0 60px;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+.en{background:#101012}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="#top">BEST<span>I</span>A</a>
+ <nav class="main"><a href="#druzyna">Drużyna</a><a href="#bestia">BESTIA</a><a href="#dane">Dane i AI</a><a href="#firma">O firmie</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a class="lang" href="#en">EN</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero">
+ <img class="bg" src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250209_125458_DC16FE-2.jpeg" alt="Zawodnicy drużyny Głodne Wilki na trasie biegu z przeszkodami">
+ <div class="wrap">
+  <img class="logo" src="https://glodnewilki.pl/wp-content/uploads/2025/03/GLODNE-WILKI-LOGO-logo-biale-kopia1-e1740848679446-768x244.png" alt="Logo drużyny Głodne Wilki">
+  <h1>System treningowy<br><em>Głodnych Wilków</em></h1>
+  <p class="lead">BESTIA układa plan treningowy dla zawodników biegów z przeszkodami (OCR) na podstawie danych z ich zegarków Garmin i wysyła go prosto na zegarek. Bieg, siła, chwyt i regeneracja w jednym planie, pod konkretne starty.</p>
+  <div class="btns"><a class="btn p" href="#bestia">Jak działa BESTIA</a><a class="btn s" href="polityka-prywatnosci.html">Polityka prywatności</a></div>
+ </div>
+</div>
+
+<section id="druzyna"><div class="wrap">
+ <div class="cols">
+  <div>
+   <p class="eyebrow">Drużyna</p>
+   <h2>Głodne Wilki</h2>
+   <p>Drużyna OCR i Ninja z Lublina, działająca jako Stowarzyszenie Głodne Wilki. Powstała w listopadzie 2024 roku i ma zasięg ogólnopolski. Zawodnicy startują w największych zawodach przeszkodowych w Polsce: Runmageddon, Barbarian Race, Spartan Race, Wolf Race, Vikings Run, a także w Ninja Series i Ninja Warrior Polska, w biegach ulicznych, górskich i triathlonach.</p>
+   <p class="muted">Drużyna trenuje wspólnie w Lublinie (OCR i Ninja, dwa razy w tygodniu, z trenerami), a pozostałe treningi zawodnicy robią sami. Właśnie te samodzielne treningi ma prowadzić BESTIA.</p>
+   <div class="events"><span>Runmageddon</span><span>Barbarian Race</span><span>Spartan Race</span><span>Wolf Race</span><span>Vikings Run</span><span>Ninja Warrior Polska</span></div>
+  </div>
+  <img src="https://glodnewilki.pl/wp-content/uploads/2025/01/CC0A9260-1-1536x1024.png" alt="Drużyna Głodne Wilki" style="border-radius:12px">
+ </div>
+ <div class="stats">
+  <div><b>50+</b><span>zawodników w drużynie</span></div>
+  <div><b>2.</b><span>sezon w lidze Runmageddon</span></div>
+  <div><b>2.</b><span>miejsce w klasyfikacji drużynowej 2026</span></div>
+  <div><b>MP · ME · MŚ</b><span>starty naszych zawodników</span></div>
+ </div>
+ <div class="gallery">
+  <img class="tall" src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250211_154827_D338E1.jpeg" alt="Zawodnik na przeszkodzie" loading="lazy">
+  <img src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250209_143928_DF6364.jpeg" alt="Start drużyny" loading="lazy">
+  <img src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250211_135757_DD379F-1.jpeg" alt="Bieg w terenie" loading="lazy">
+  <img class="tall" src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250302_000228_D6E00B.jpeg" alt="Zawodniczka OCR" loading="lazy">
+  <img src="https://glodnewilki.pl/wp-content/uploads/2025/03/20250209_143513_D20E70-1.jpeg" alt="Przeszkoda wisząca" loading="lazy">
+  <img src="https://glodnewilki.pl/wp-content/uploads/2025/01/465170238_8728098423937457_409301215889242993_n.jpg" alt="Drużyna po starcie" loading="lazy">
+ </div>
+ <p class="muted" style="font-size:13px;margin-top:10px">Zdjęcia: Stowarzyszenie Głodne Wilki, <a href="https://glodnewilki.pl">glodnewilki.pl</a>.</p>
+</div></section>
+
+<section id="bestia"><div class="wrap">
+ <p class="eyebrow">Dla zawodników drużyny</p>
+ <h2>Co daje BESTIA</h2>
+ <p class="lead" style="color:var(--mut)">Długie biegi OCR, nawet 45 km i ponad 140 przeszkód, wymagają planu, który łączy bieg w terenie, siłę, chwyt i odpoczynek. BESTIA robi to dla każdego zawodnika osobno.</p>
+ <div class="cards">
+  <div class="card"><div class="n">Plan na zegarek</div><h3>Trening krok po kroku</h3><p class="muted">Każdy trening trafia do kalendarza Garmin Connect i na zegarek: rozgrzewka, odcinki z celem tempa lub tętna, przerwy, siła i chwyt z sygnałem dźwiękowym.</p></div>
+  <div class="card"><div class="n">Cele i rekordy</div><h3>Postęp, który widać</h3><p class="muted">Cele sezonu na pierwszym ekranie, rekordy na dystansach, testy siły i chwytu oraz podsumowanie każdego bloku treningowego.</p></div>
+  <div class="card"><div class="n">Regeneracja</div><h3>Plan dopasowany do dnia</h3><p class="muted">HRV, tętno spoczynkowe i sen z zegarka pomagają ocenić, czy zrobić trening z planu, czy lżejszy.</p></div>
+ </div>
+ <ol class="steps">
+  <li><h3>Połączenie</h3><p class="muted">Zawodnik łączy konto Garmin Connect i wyraża zgody.</p></li>
+  <li><h3>Dane</h3><p class="muted">BESTIA odczytuje aktywności i dane dzienne dokładnie tak, jak pokazuje je Garmin.</p></li>
+  <li><h3>Plan</h3><p class="muted">Plan oparty na literaturze naukowej trafia na zegarek przez Garmin Connect.</p></li>
+  <li><h3>Kontrola</h3><p class="muted">Po treningu BESTIA sprawdza wykonanie i dopasowuje kolejne sesje.</p></li>
+ </ol>
+ <p class="muted" style="margin-top:28px">Status: wersja testowa. Działa jako prototyp, a pierwszą grupą testową są zawodnicy Głodnych Wilków.</p>
+</div></section>
+
+<section id="dane"><div class="wrap">
+ <p class="eyebrow">Dane i sztuczna inteligencja</p>
+ <h2>Twoje dane służą tylko Tobie</h2>
+ <div class="ai">
+  <ul>
+   <li>BESTIA używa modelu językowego Claude (Anthropic) do przygotowania planu i podsumowań, wyłącznie z danych danego zawodnika i tylko po jego osobnej, wyraźnej zgodzie.</li>
+   <li>Zgodę można wycofać w każdej chwili. Bez niej dane nie są przekazywane do AI.</li>
+   <li>Nie trenujemy ani nie dostrajamy żadnych modeli AI na danych z Garmin ani na danych zawodników.</li>
+   <li>Nie sprzedajemy danych i nie wyświetlamy reklam. Dane z Garmin oznaczamy jako pochodzące z Garmin.</li>
+  </ul>
+  <p style="margin:16px 0 0"><a href="polityka-prywatnosci.html">Pełna polityka prywatności</a></p>
+ </div>
+</div></section>
+
+<section id="firma"><div class="wrap">
+ <p class="eyebrow">O firmie</p>
+ <h2>Kto rozwija BESTIĘ</h2>
+ <div class="company">
+  <p>BESTIĘ rozwija MiMariposa sp. z o.o., spółka holdingowa z Lublina działająca pod marką K2-Estates (<a href="https://k2estates.pl">k2estates.pl</a>), współzałożyciel Stowarzyszenia Głodne Wilki. Spółka jest administratorem danych przetwarzanych w BESTII.</p>
+  <dl>
+   <dt>Nazwa</dt><dd>MiMariposa sp. z o.o.</dd>
+   <dt>Siedziba</dt><dd>ul. Tomasza Zana 11A/166, 20-601 Lublin</dd>
+   <dt>KRS</dt><dd>0000426506</dd>
+   <dt>NIP</dt><dd>9462639273</dd>
+   <dt>Prezes Zarządu</dt><dd>Rafał Stachyra</dd>
+   <dt>Kontakt</dt><dd><a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a></dd>
+  </dl>
+ </div>
+</div></section>
+
+<section id="en" class="en"><div class="wrap">
+ <p class="eyebrow">English</p>
+ <h2>The training system of Głodne Wilki</h2>
+ <p>BESTIA is a training planning system for obstacle course racing (OCR) athletes of the Głodne Wilki team, a Lublin-based OCR and Ninja team (Stowarzyszenie Głodne Wilki) founded in November 2024, with more than 50 athletes. In 2026, its second season in the Runmageddon league, the largest OCR series in Poland, the team finished second in the team classification, and its athletes race at Polish, European and World championships.</p>
+ <p>Using each athlete's own Garmin data, BESTIA builds structured running, strength and grip workouts and delivers them to the Garmin Connect calendar and the athlete's watch. Activity and health data (HRV, resting heart rate, sleep) are used only to check execution and recovery for that same athlete.</p>
+ <p><b>Data and AI.</b> BESTIA uses Anthropic's Claude model only with the athlete's separate, explicit and revocable consent, and only to answer that athlete. We do not train or fine-tune any AI model on Garmin data or user data. No advertising, no sale of data. Garmin-sourced data is attributed to Garmin. Status: closed beta for team members. <a href="polityka-prywatnosci.html#ai-en">Privacy policy</a>.</p>
+ <p><b>Developer.</b> MiMariposa sp. z o.o. (brand K2-Estates, k2estates.pl), ul. Tomasza Zana 11A/166, 20-601 Lublin, Poland, KRS 0000426506, NIP 9462639273, co-founder of the Głodne Wilki association. Contact: <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a>.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 MiMariposa sp. z o.o. · BESTIA · <a href="polityka-prywatnosci.html">Polityka prywatności / Privacy Policy</a></span>
+ <span>Garmin i Garmin Connect są znakami towarowymi Garmin Ltd. BESTIA nie jest produktem Garmin.</span>
+</div></footer>
+</body>
+</html>
