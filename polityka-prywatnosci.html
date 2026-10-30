@@ -1,69 +1,101 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BESTIA: polityka prywatności</title><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet"><style>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BESTIA · Polityka prywatności</title>
+<meta name="description" content="Polityka prywatności BESTII, w tym informacja o sztucznej inteligencji.">
+<link rel="alternate" hreflang="pl" href="https://bestia.k2estates.pl/polityka-prywatnosci.html">
+<link rel="alternate" hreflang="en" href="https://bestia.k2estates.pl/privacy-policy.html">
+<link rel="alternate" hreflang="x-default" href="https://bestia.k2estates.pl/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
 :root{--bg:#0b0b0c;--panel:#141416;--line:#26262a;--fg:#f3f3f1;--mut:#a3a3a8;--acc:#e8462a;--acc2:#ff7a4d}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-header.top{position:sticky;top:0;background:rgba(11,11,12,.9);border-bottom:1px solid var(--line)}
-header.top div{max-width:820px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc2)}img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}.narrow{max-width:820px}
+header.top{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:20px;height:60px}
 .brand{font:800 24px/1 "Barlow Condensed",sans-serif;letter-spacing:.06em;color:var(--fg);text-decoration:none}.brand span{color:var(--acc)}
-header.top nav{margin-left:auto;display:flex;gap:16px}header.top nav a{color:var(--mut);text-decoration:none;font-size:14px}
-main{max-width:820px;margin:0 auto;padding:40px 20px 72px}
-h1{font:800 clamp(34px,6vw,52px)/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:24px 0 12px}
-h2{font-size:20px;margin:32px 0 8px}p,li{color:#e6e6e2}a{color:var(--acc2)}.mut{color:var(--mut);font-size:14px}
-hr{border:0;border-top:1px solid var(--line);margin:48px 0}
-.ai{background:linear-gradient(135deg,#1b120f,#141416);border:1px solid #4a2a20;border-radius:14px;padding:22px 24px;margin:24px 0}.ai h2{margin-top:0;color:var(--fg)}
-</style></head><body><header class="top"><div><a class="brand" href="./">BEST<span>I</span>A</a><nav><a href="./">Strona główna</a><a href="#ai-en">English</a></nav></div></header><main><h1>Polityka prywatności BESTIA / BESTIA Privacy Policy</h1>
-<p>Wersja 1.1 z dnia 30.10.2026. Wersja angielska poniżej.</p><section class="ai" id="ai"><h2>Sztuczna inteligencja w BESTII: najważniejsze informacje</h2><p>BESTIA używa modelu językowego Claude firmy Anthropic (przez API), aby z danych danego użytkownika, w tym danych z Garmin, przygotować jego plan treningowy i podsumowania.</p><ol><li>Przetwarzanie przez AI rozpoczyna się dopiero po osobnej, wyraźnej zgodzie użytkownika, odrębnej od pozostałych zgód.</li><li>Zgodę można wycofać w każdej chwili jednym kliknięciem w ustawieniach BESTII albo e-mailem na zarzad@mimariposa.pl. Bez tej zgody BESTIA nie przekazuje danych do AI, a plan nie jest generowany automatycznie.</li><li>Dane użytkownika służą wyłącznie do odpowiedzi temu samemu użytkownikowi.</li><li>Nie trenujemy ani nie dostrajamy żadnych modeli AI (własnych ani cudzych) na danych z Garmin ani na innych danych użytkowników. Anthropic nie trenuje swoich modeli na danych przesyłanych przez komercyjne API.</li><li>Propozycje AI są propozycjami: użytkownik je zatwierdza lub zmienia.</li><li>Tę informację aktualizujemy przy każdej zmianie przepisów lub zasad Garmin.</li></ol></section>
-<h2>1. Administrator danych</h2>
-<p>Administratorem danych osobowych jest MiMariposa sp. z o.o. z siedzibą w Lublinie (ul. Tomasza Zana 11A/166, 20-601 Lublin), wpisana do rejestru przedsiębiorców KRS pod numerem 0000426506, NIP 9462639273 („BESTIA”, „my”). Kontakt w sprawach danych osobowych: zarzad@mimariposa.pl.</p>
-<h2>2. Czym jest BESTIA</h2>
-<p>BESTIA to system planowania treningu dla zawodników biegów z przeszkodami (OCR). Na podstawie danych z zegarka Garmin układa plan treningowy, wysyła treningi do Garmin Connect i przygotowuje podsumowania postępów.</p>
-<h2>3. Jakie dane przetwarzamy</h2>
-<ol>
+nav.main{margin-left:auto;display:flex;gap:18px;align-items:center}
+nav.main a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:500}nav.main a:hover{color:var(--fg)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:13px;font-weight:600}
+.lang a,.lang b{padding:4px 11px;text-decoration:none}.lang b{background:var(--acc);color:#fff}.lang a{color:var(--mut)}
+@media(max-width:760px){nav.main a.hide{display:none}}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.2) brightness(.42)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.1) 30%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:64px;padding-top:120px}
+.hero img.logo{width:min(320px,70vw);margin-bottom:22px;opacity:.95}
+h1{font:800 clamp(44px,8vw,92px)/.92 "Barlow Condensed",sans-serif;margin:0 0 18px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:clamp(17px,2vw,20px);color:#dcdcd8;max-width:660px;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15px}
+.btn.p{background:var(--acc);color:#fff}.btn.s{border:1px solid #55555c;color:var(--fg)}
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font:600 13px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 12px}
+h2{font:800 clamp(34px,5vw,54px)/1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 20px}
+h3{font:600 19px/1.3 Inter,sans-serif;margin:0 0 8px}
+.cols{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.muted{color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:36px}
+.stats div{background:var(--panel);padding:22px 18px}.stats b{display:block;font:800 40px/1 "Barlow Condensed",sans-serif}.stats span{font-size:13px;color:var(--mut)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.league{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:16px 20px;font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px;margin-top:36px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:8px}.gallery .tall{grid-row:span 2}
+@media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+.events{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.events span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:#d6d6d2}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}@media(max-width:860px){.cards{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px}.card .n{font:800 28px/1 "Barlow Condensed",sans-serif;color:var(--acc);margin-bottom:12px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;padding:0;list-style:none}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;border-top:3px solid var(--acc);padding-top:14px}
+.steps li::before{content:"0" counter(s);font:800 22px/1 "Barlow Condensed",sans-serif;color:var(--mut);display:block;margin-bottom:8px}
+.ai{background:linear-gradient(135deg,#1b120f,#141416);border:1px solid #4a2a20;border-radius:14px;padding:26px 28px;margin:24px 0}.ai h2{font-size:28px;margin:0 0 8px}
+.ai ul,.ai ol{margin:12px 0 0;padding-left:20px}.ai li{margin:6px 0}
+.company{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}@media(max-width:860px){.company{grid-template-columns:1fr}}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}dt{color:var(--mut)}dd{margin:0}
+.policy{padding:40px 0 72px}.policy h1{font-size:clamp(36px,6vw,56px);margin:16px 0 8px}.policy h2{font:600 20px/1.3 Inter,sans-serif;text-transform:none;margin:32px 0 8px}
+.policy p,.policy li{color:#e6e6e2}
+footer{padding:40px 0 60px;color:var(--mut);font-size:14px}footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="pl.html">BEST<span>I</span>A</a><nav class="main"><a class="hide" href="pl.html#druzyna">Drużyna</a><a class="hide" href="pl.html#bestia">BESTIA</a><a class="hide" href="pl.html#dane">Dane i AI</a><a class="hide" href="pl.html#firma">O firmie</a><a class="hide" href="polityka-prywatnosci.html">Polityka prywatności</a><span class="lang"><a href="privacy-policy.html" hreflang="en" lang="en">EN</a><b>PL</b></span></nav></div></header>
+<main class="wrap narrow policy">
+<h1>Polityka prywatności</h1>
+<p class="muted">BESTIA · Wersja 1.2 z dnia 30.10.2026 · <a href="privacy-policy.html">English version</a></p>
+<section class="ai" id="ai"><h2>Sztuczna inteligencja w BESTII: najważniejsze informacje</h2>
+<p>BESTIA używa modelu językowego Claude firmy Anthropic (przez API), aby z danych danego użytkownika, w tym danych z Garmin, przygotować jego plan treningowy i podsumowania.</p><ol>
+<li>Przetwarzanie przez AI rozpoczyna się dopiero po osobnej, wyraźnej zgodzie użytkownika, odrębnej od pozostałych zgód.</li>
+<li>Zgodę można wycofać w każdej chwili jednym kliknięciem w ustawieniach BESTII albo e-mailem na zarzad@mimariposa.pl. Bez tej zgody BESTIA nie przekazuje danych do AI, a plan nie jest generowany automatycznie.</li>
+<li>Dane użytkownika służą wyłącznie do odpowiedzi temu samemu użytkownikowi.</li>
+<li>Nie trenujemy ani nie dostrajamy żadnych modeli AI (własnych ani cudzych) na danych z Garmin ani na innych danych użytkowników. Anthropic nie trenuje swoich modeli na danych przesyłanych przez komercyjne API.</li>
+<li>Propozycje AI są propozycjami: użytkownik je zatwierdza lub zmienia.</li>
+<li>Tę informację aktualizujemy przy każdej zmianie przepisów lub zasad Garmin.</li></ol></section>
+<h2>1. Administrator danych</h2><p>Administratorem danych osobowych jest MiMariposa sp. z o.o. z siedzibą w Lublinie (ul. Tomasza Zana 11A/166, 20-601 Lublin), wpisana do rejestru przedsiębiorców KRS pod numerem 0000426506, NIP 9462639273 („BESTIA”, „my”). Kontakt w sprawach danych osobowych: zarzad@mimariposa.pl.</p>
+<h2>2. Czym jest BESTIA</h2><p>BESTIA to system planowania treningu dla zawodników biegów z przeszkodami (OCR), obecnie udostępniany jako zamknięta, niekomercyjna wersja testowa zawodnikom drużyny Głodne Wilki. Na podstawie danych z zegarka Garmin układa plan treningowy, wysyła treningi do Garmin Connect i przygotowuje podsumowania postępów.</p>
+<h2>3. Jakie dane przetwarzamy</h2><ol>
 <li>Dane z konta Garmin Connect, które użytkownik sam udostępnia, łącząc konto: aktywności (data, czas, dystans, przewyższenie, tętno, kadencja i inne wskaźniki biegu), dane dzienne (HRV, tętno spoczynkowe, sen, masa ciała).</li>
 <li>Dane podane przez użytkownika: cele, kalendarz startów, wyniki zawodów, testy, odpowiedzi w ankietach.</li>
-<li>Dane kontaktowe: imię i adres e-mail.</li>
-</ol>
+<li>Dane kontaktowe: imię i adres e-mail.</li></ol>
 <p>Dane o tętnie, HRV, śnie i masie ciała mogą być danymi dotyczącymi zdrowia w rozumieniu art. 9 RODO.</p>
-<h2>4. Cel i podstawa prawna</h2>
-<ol>
-<li>Przygotowanie i wysyłanie planu treningowego, analiza postępów: wykonanie umowy (art. 6 ust. 1 lit. b RODO) oraz wyraźna zgoda na przetwarzanie danych dotyczących zdrowia (art. 9 ust. 2 lit. a RODO).</li><li>Przygotowanie planu i podsumowań z użyciem sztucznej inteligencji: osobna, wyraźna zgoda (art. 6 ust. 1 lit. a i art. 9 ust. 2 lit. a RODO), opisana w ramce na początku tej polityki.</li>
-<li>Bezpieczeństwo i obsługa techniczna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).</li>
-</ol>
+<h2>4. Cel i podstawa prawna</h2><ol>
+<li>Przygotowanie i wysyłanie planu treningowego, analiza postępów: wykonanie umowy (art. 6 ust. 1 lit. b RODO) oraz wyraźna zgoda na przetwarzanie danych dotyczących zdrowia (art. 9 ust. 2 lit. a RODO).</li>
+<li>Przygotowanie planu i podsumowań z użyciem sztucznej inteligencji: osobna, wyraźna zgoda (art. 6 ust. 1 lit. a i art. 9 ust. 2 lit. a RODO), opisana w ramce na początku tej polityki.</li>
+<li>Bezpieczeństwo i obsługa techniczna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO).</li></ol>
 <p>Zgodę można wycofać w każdej chwili, odłączając konto Garmin w BESTII lub w ustawieniach Garmin Connect albo pisząc na adres kontaktowy. Wycofanie zgody nie wpływa na zgodność z prawem przetwarzania przed jej wycofaniem.</p>
-<h2>5. Sztuczna inteligencja</h2>
-<p>Zasady i osobna zgoda: zob. ramka na początku polityki. BESTIA korzysta z modelu językowego Claude firmy Anthropic, wywoływanego przez API, aby na podstawie danych danego użytkownika przygotować jego plan i podsumowania. Zasady:</p>
-<ol>
-<li>Dane użytkownika służą wyłącznie do odpowiedzi temu użytkownikowi.</li>
-<li>Nie używamy danych z Garmin ani innych danych użytkowników do trenowania ani ulepszania modeli sztucznej inteligencji, ani własnych, ani cudzych.</li>
-<li>Anthropic nie wykorzystuje danych przesyłanych przez API do trenowania swoich modeli (zgodnie z warunkami komercyjnymi Anthropic).</li>
-<li>Decyzje treningowe są propozycjami; użytkownik je zatwierdza i może zmienić.</li>
-</ol>
-<h2>6. Odbiorcy danych</h2>
-<p>Dane mogą być przetwarzane przez dostawców usług działających na nasze zlecenie: Garmin (źródło danych i odbiorca planu treningowego), Google (arkusze i skrypty), GitHub (przechowywanie plików), Anthropic (model językowy). Nie sprzedajemy danych i nie przekazujemy ich w celach marketingowych.</p>
-<h2>7. Przekazywanie poza EOG</h2>
-<p>Część dostawców ma siedzibę w USA. Przekazanie odbywa się na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu ochrony (EU-US Data Privacy Framework) lub standardowych klauzul umownych.</p>
-<h2>8. Okres przechowywania</h2>
-<p>Dane przechowujemy przez czas korzystania z BESTII, a po odłączeniu konta lub wycofaniu zgody usuwamy je w ciągu 30 dni, chyba że przepisy wymagają dłuższego przechowywania.</p>
-<h2>9. Prawa użytkownika</h2>
-<p>Użytkownik ma prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, sprzeciwu oraz wycofania zgody. Ma też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</p>
-<h2>10. Bezpieczeństwo</h2>
-<p>Klucze dostępu przechowujemy wyłącznie w zabezpieczonych ustawieniach skryptów, nie w plikach ani arkuszach. Dostęp do danych mają tylko osoby obsługujące BESTIĘ.</p>
-<h2>11. Dane z Garmin</h2>
-<p>Dane pobrane z Garmin Connect i wyliczenia oparte na nich są w BESTII oznaczane jako pochodzące z Garmin. Garmin i Garmin Connect są znakami towarowymi Garmin Ltd. lub jej spółek zależnych. BESTIA nie jest produktem Garmin.</p>
-<h2>12. Zmiany</h2>
-<p>O zmianach polityki informujemy na tej stronie z nową datą wersji.</p>
-<hr>
-<h1>BESTIA Privacy Policy (English)</h1>
-<p>Version 1.1, 30 October 2026.</p><section class="ai" id="ai-en"><h2>Artificial intelligence in BESTIA: key facts</h2><p>BESTIA uses Anthropic's Claude language model (via API) to prepare each user's training plan and summaries from that user's own data, including Garmin data.</p><ol><li>AI processing starts only after the user gives separate, explicit consent, distinct from any other consent.</li><li>Consent can be withdrawn at any time with one click in BESTIA settings or by e-mail to zarzad@mimariposa.pl. Without it, BESTIA sends no data to AI and no plan is generated automatically.</li><li>A user's data is used only to answer that same user.</li><li>We do not train or fine-tune any AI model, ours or third parties', on Garmin data or any other user data. Anthropic does not train its models on data sent through its commercial API.</li><li>AI output is a proposal that the user approves or changes.</li><li>We update this statement whenever the law or Garmin's policies change.</li></ol></section>
-<ol>
-<li>Controller: MiMariposa sp. z o.o., registered office: ul. Tomasza Zana 11A/166, 20-601 Lublin, Poland, KRS 0000426506, NIP 9462639273. Contact: zarzad@mimariposa.pl.</li>
-<li>Service: BESTIA is a training planning system for obstacle course racing (OCR) athletes. It uses Garmin watch data to build a training plan, sends workouts to Garmin Connect and prepares progress summaries.</li>
-<li>Data: activities and daily metrics the user shares by connecting a Garmin Connect account (activities, distance, elevation, heart rate, cadence, HRV, resting heart rate, sleep, body weight); goals, race calendar, results and tests entered by the user; name and e-mail. Heart rate, HRV, sleep and weight may be health data under Art. 9 GDPR.</li>
-<li>Purpose and legal basis: providing the training plan (Art. 6(1)(b) GDPR) and explicit consent for health data (Art. 9(2)(a) GDPR); security and technical support (Art. 6(1)(f) GDPR). Consent can be withdrawn at any time by disconnecting Garmin in BESTIA or in Garmin Connect, or by e-mail. AI processing requires a separate explicit consent (see the box above).</li>
-<li>Artificial intelligence: BESTIA uses Anthropic&#x27;s Claude model via API to prepare each user&#x27;s plan and summaries from that user&#x27;s own data. User data is used only to answer that user. We do not use Garmin data or any user data to train or improve any AI model, ours or third parties&#x27;. Anthropic does not train its models on data sent through its commercial API. Training decisions are proposals that the user approves.</li>
-<li>Recipients: service providers acting on our behalf: Garmin, Google, GitHub, Anthropic. We do not sell data.</li>
-<li>Transfers outside the EEA: on the basis of the EU-US Data Privacy Framework or standard contractual clauses.</li>
-<li>Retention: while the user uses BESTIA; deleted within 30 days after disconnecting or withdrawing consent, unless the law requires longer storage.</li>
-<li>Rights: access, rectification, erasure, restriction, portability, objection, withdrawal of consent, and a complaint to the Polish supervisory authority (Prezes UODO, ul. Stawki 2, 00-193 Warszawa).</li>
-<li>Security: access keys are stored only in protected script settings; access limited to BESTIA operators.</li>
-<li>Garmin data: data from Garmin Connect and metrics derived from it are attributed to Garmin in BESTIA. Garmin and Garmin Connect are trademarks of Garmin Ltd. or its subsidiaries. BESTIA is not a Garmin product.</li><li>Changes: published on this page with a new version date.</li>
-</ol><hr><p class="mut">MiMariposa sp. z o.o. (marka / brand K2-Estates, <a href="https://k2estates.pl">k2estates.pl</a>), ul. Tomasza Zana 11A/166, 20-601 Lublin, KRS 0000426506, NIP 9462639273, kontakt / contact: <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a></p></main></body></html>
+<h2>5. Odbiorcy danych</h2><p>Dane mogą być przetwarzane przez dostawców usług działających na nasze zlecenie: Garmin (źródło danych i odbiorca planu treningowego), Google (arkusze i skrypty), GitHub (przechowywanie plików), Anthropic (model językowy). Nie sprzedajemy danych i nie przekazujemy ich w celach marketingowych.</p>
+<h2>6. Przekazywanie poza EOG</h2><p>Część dostawców ma siedzibę w USA. Przekazanie odbywa się na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu ochrony (EU-US Data Privacy Framework) lub standardowych klauzul umownych.</p>
+<h2>7. Okres przechowywania</h2><p>Dane przechowujemy przez czas korzystania z BESTII, a po odłączeniu konta lub wycofaniu zgody usuwamy je w ciągu 30 dni, chyba że przepisy wymagają dłuższego przechowywania.</p>
+<h2>8. Prawa użytkownika</h2><p>Użytkownik ma prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, sprzeciwu oraz wycofania zgody. Ma też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa).</p>
+<h2>9. Bezpieczeństwo</h2><p>Klucze dostępu przechowujemy wyłącznie w zabezpieczonych ustawieniach skryptów, nie w plikach ani arkuszach. Dostęp do danych mają tylko osoby obsługujące BESTIĘ.</p>
+<h2>10. Dane z Garmin</h2><p>Dane pobrane z Garmin Connect i wyliczenia oparte na nich są w BESTII oznaczane jako pochodzące z Garmin. Garmin i Garmin Connect są znakami towarowymi Garmin Ltd. lub jej spółek zależnych. BESTIA nie jest produktem Garmin.</p>
+<h2>11. Zmiany</h2><p>O zmianach polityki informujemy na tej stronie z nową datą wersji.</p>
+</main>
+<footer><div class="wrap"><span>MiMariposa sp. z o.o. (marka K2-Estates, <a href="https://k2estates.pl">k2estates.pl</a>), ul. Tomasza Zana 11A/166, 20-601 Lublin, KRS 0000426506, NIP 9462639273 · <a href="mailto:zarzad@mimariposa.pl">zarzad@mimariposa.pl</a></span></div></footer>
+</body>
+</html>
