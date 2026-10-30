@@ -14,15 +14,22 @@
 <p class="mut"><a href="./">BESTIA</a> · <a href="privacy-policy.html">Privacy Policy</a></p>
 </main>
 <script>
-// Garmin OAuth2 redirect target. Forwards code and state to the BESTIA backend.
-// BACKEND_URL is set when the backend is deployed; until then the page only reports the result.
+// Garmin OAuth2 redirect target. Forwards code and state to the BESTIA backend (Google Apps Script web app).
+// The backend id travels inside "state" (nonce~deploymentId). Only script.google.com/macros/s/<id>/exec is allowed.
 var BACKEND_URL = "";
+function bestiaBackend(state) {
+  if (BACKEND_URL) return BACKEND_URL;
+  var parts = String(state || "").split("~");
+  if (parts.length !== 2 || !/^[A-Za-z0-9_-]{20,120}$/.test(parts[1])) return "";
+  return "https://script.google.com/macros/s/" + parts[1] + "/exec";
+}
 (function(){
   var q = new URLSearchParams(location.search), h = document.getElementById("h"), m = document.getElementById("m");
   if (q.get("error")) { h.textContent = "Connection cancelled"; m.textContent = "Garmin returned: " + q.get("error") + ". You can close this page. / Połączenie anulowane, możesz zamknąć stronę."; return; }
   if (!q.get("code")) { h.textContent = "BESTIA · Garmin connection"; m.textContent = "This page completes the connection between a Garmin Connect account and BESTIA. / Ta strona kończy łączenie konta Garmin Connect z BESTIĄ."; return; }
-  if (BACKEND_URL) { location.replace(BACKEND_URL + "?code=" + encodeURIComponent(q.get("code")) + "&state=" + encodeURIComponent(q.get("state") || "")); return; }
-  h.textContent = "Garmin account authorised"; m.textContent = "Authorisation received. BESTIA is not yet ready to finish the connection; please try again later. / Zgoda przyjęta, BESTIA dokończy połączenie w kolejnej wersji.";
+  var b = bestiaBackend(q.get("state"));
+  if (b) { location.replace(b + "?code=" + encodeURIComponent(q.get("code")) + "&state=" + encodeURIComponent(q.get("state") || "")); return; }
+  h.textContent = "Connection link not recognised"; m.textContent = "Please start again from the BESTIA menu. / Nie rozpoznano linku, zacznij ponownie z menu BESTIA w arkuszu.";
 })();
 </script>
 </body>
