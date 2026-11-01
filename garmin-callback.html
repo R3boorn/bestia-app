@@ -29,6 +29,19 @@ function bestiaBackend(state) {
   if (!q.get("code")) { h.textContent = "BESTIA · Garmin connection"; m.textContent = "This page completes the connection between a Garmin Connect account and BESTIA. / Ta strona kończy łączenie konta Garmin Connect z BESTIĄ."; return; }
   var b = bestiaBackend(q.get("state"));
   if (b) { location.replace(b + "?code=" + encodeURIComponent(q.get("code")) + "&state=" + encodeURIComponent(q.get("state") || "")); return; }
+  var st = String(q.get("state") || "");
+  if (/^[A-Za-z0-9_-]{8,64}$/.test(st)) {
+    var kod = st + "!" + q.get("code");
+    h.textContent = "Almost done: copy this code / Prawie gotowe: skopiuj kod";
+    m.textContent = "Copy the code and paste it in the BESTIA window in your spreadsheet. / Skopiuj kod i wklej go w okienku BESTIA w arkuszu (kod działa 15 min, tylko raz).";
+    var box = document.createElement("div");
+    box.innerHTML = '<input id="kod" readonly style="width:100%;padding:10px;font:14px monospace;box-sizing:border-box;margin:8px 0"><button id="kop" style="background:#e8462a;color:#fff;border:0;padding:10px 18px;border-radius:8px;font-weight:bold;font-size:16px">Kopiuj / Copy</button> <span id="ok" class="mut"></span>';
+    m.parentNode.insertBefore(box, m.nextSibling);
+    var inp = document.getElementById("kod"); inp.value = kod;
+    document.getElementById("kop").onclick = function(){ inp.select(); var done = function(){ document.getElementById("ok").textContent = "Skopiowano / Copied"; };
+      if (navigator.clipboard) navigator.clipboard.writeText(kod).then(done, function(){ document.execCommand("copy"); done(); }); else { document.execCommand("copy"); done(); } };
+    return;
+  }
   h.textContent = "Connection link not recognised"; m.textContent = "Please start again from the BESTIA menu. / Nie rozpoznano linku, zacznij ponownie z menu BESTIA w arkuszu.";
 })();
 </script>
